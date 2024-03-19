@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\backend\ComicsController;
+use App\Http\Controllers\Guest\PageController;
 use App\Http\Controllers\Home\WelcomeController as WelcomeController;
 
 /*
@@ -15,9 +16,8 @@ use App\Http\Controllers\Home\WelcomeController as WelcomeController;
 |
 */
 
-Route::get('/', function () {
+Route::get ('/', [PageController::class, 'index'])->name('homePage');
 
-    return view('pages.welcome');
-})->name('homePage');
+Route::resource('comics', ComicsController::class);
 
 
