@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class WelcomeController extends Controller
 {
     public function index() {
-        $products = config('db.pasta');
+        $products = config('db.comic');
 
         return view('pages.welcome', compact('products'));
      }
