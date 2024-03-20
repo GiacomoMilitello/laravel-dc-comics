@@ -45,6 +45,9 @@
                                 <button class="btn btn-danger" type="submit">ELIMINA</button>
 
                             </form>
+
+                            <a class="btn btn-primary" href="{{ route('comics.edit', $item->id) }}">Modifica</a>
+
                             </td>
                         </tr>
                     @endforeach
